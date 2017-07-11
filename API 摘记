@@ -1,0 +1,20 @@
+#Vue2 API摘记
+
+###全局API
+
+`Vue.nextTick([callback,context])`
+
+**用法**：在下次DOM横向循环结束之后延迟回调。在修改数据之后立即调用此方法以获取更新后的DOM。
+
+`Vue.directive(id,[definition])`
+
+**参数definition**：Function | Object 当不需要钩子函数时使用Function即可
+
+###选项/数据
+
+`data`
+
+**类型**：Object | Function
+
+**注意**：data 应该只能是数据 - 不推荐观察拥有状态行为的对象；组件定义时仅能使用Function去return一个新对象，避免组件在被重复初始化后data对象因共享而相互影响。
+
